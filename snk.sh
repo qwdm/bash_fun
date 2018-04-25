@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Snake game in pure bash with minimal use even coreutils
+
 
 #####################################
 #### consts & vars declarations #####
