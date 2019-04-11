@@ -1,0 +1,17 @@
+#alias goeg='cd ~/devel/ml/kaggle/eeg_seizure'
+#alias testenv='source  ~/.conda/envs/testenv/bin/activate'
+
+#alias q="ssh -A zvezdalet"
+#alias gohaskell="cd devel/research/haskell"
+
+alias p="python3.7"
+alias ipy="ipython3"
+alias gopushme="cd $HOME/devel/x5/pushme"
+
+#################
+# git
+
+alias gst="git status"
+alias gpl="git pull --rebase"
+alias gdd="git add"
+alias gcm="git commit -m"
