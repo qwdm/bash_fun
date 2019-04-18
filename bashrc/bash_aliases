@@ -6,7 +6,7 @@
 
 alias p="python3.7"
 alias ipy="ipython3"
-alias gopushme="cd $HOME/devel/x5/pushme"
+alias gopushme="cd $HOME/devel/x5/pushme && venv && clear"
 
 #################
 # git
@@ -15,3 +15,5 @@ alias gst="git status"
 alias gpl="git pull --rebase"
 alias gdd="git add"
 alias gcm="git commit -m"
+alias gdf="git diff"
+alias ggr="git grep"

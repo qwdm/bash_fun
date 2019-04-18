@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -137,38 +137,13 @@ PROMPT_COMMAND=__prompt_command
 
 ##################
 
-VZHOME="/home/qwdm/devel/vz"
-export VZHOME
-
-source $VZHOME/junk/utils.sh
-    
-vpn () {
-    sudo cat /root/ps | \
-    sudo openconnect msk-vpn.virtuozzo.com  --config=openconnect.conf
-}
+#vpn () {
+#    sudo cat /root/ps | \
+#    sudo openconnect msk-vpn.virtuozzo.com  --config=openconnect.conf
+#}
 
 
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/devel/go
 
-#alias python2="python2.7"
-#alias python="python3.6"
-
-halfhour () {
-    date
-
-    for i in `seq 30`; do
-        sleep 60
-        echo -n "$i "
-    done
-
-    for i in `seq 5`; do
-        notify-send "Wake Up $i"
-    done
-
-}
-
-
-cl () {
-    awk "{print \$$1}"
-}
+source $HOME/devel/bash_fun/bashrc/utils.sh
