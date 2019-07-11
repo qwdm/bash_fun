@@ -75,7 +75,8 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto --group-directories-first'
+    gls=/Users/qwdm/devel/clones/homebrew/Cellar/coreutils/8.31/bin/gls
+    alias ls='gls --color=auto --group-directories-first'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -124,8 +125,8 @@ __prompt_command () {
     local venvps
 
     # git
-    gitps=$(__git_ps1)
-    gitps=$([ -n "$gitps" ] && echo " (git: ${gitps:2:-1})")
+    gitps=$(__git_ps1 | sed -e 's/[ ()]//g')  # remove spaces and parenthesis
+    gitps=$([ -n "$gitps" ] && echo " (git: ${gitps})")
 
     # virtualenv
     venps=$([ -n "$VIRTUAL_ENV" ] && echo " (venv: $(basename $VIRTUAL_ENV))")

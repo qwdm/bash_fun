@@ -17,3 +17,18 @@ alias gdd="git add"
 alias gcm="git commit -m"
 alias gdf="git diff"
 alias ggr="git grep"
+
+
+################
+# docker, docker-compose
+#
+
+dkr-sh() {
+    docker-compose exec "$1" sh
+}
+
+dkr-up() {
+    docker-compose up --build "$1"
+}
+
+alias dkr-show="docker container list"  # show alive containers
